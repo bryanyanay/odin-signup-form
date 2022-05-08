@@ -1,5 +1,43 @@
+@font-face {
+    font-family: title-font;
+    src: url("AbrilFatface-Regular.ttf");
+}
+
 
 body {
     display: flex;
-    
+    margin: 0;
 }
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 35vw;
+    height: 100vh;
+
+    background-color: lightcoral;
+    background-image: url("images/pizza.jpg");
+    background-size: cover;
+}
+
+.cover .title {
+    text-align: center;
+
+    font-family: title-font, serif;
+    font-size: 3rem;
+
+    background-color: rgba(0, 0, 0, 0.63);
+    color: whitesmoke;
+
+    padding: 0.7em;
+    margin-top: 20vh;
+    margin-bottom: auto;
+}
+.cover .credits {
+    color: rgba(245, 245, 245, 0.733);
+
+    text-align: center;
+}
+
