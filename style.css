@@ -3,10 +3,15 @@
     src: url("AbrilFatface-Regular.ttf");
 }
 
+:root {
+    box-sizing: border-box;
+
+    --dark-accent-color: rgb(120, 9, 3);
+}
 
 body {
     display: flex;
-    margin: 0;
+    margin: 0;    
 }
 
 .cover {
@@ -15,7 +20,7 @@ body {
     justify-content: center;
 
     width: 35vw;
-    height: 100vh;
+    min-height: 100vh;
 
     background-color: lightcoral;
     background-image: url("images/pizza.jpg");
@@ -43,3 +48,114 @@ body {
     text-align: center;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Helvetica, sans-serif;
+
+    background: rgb(255, 247, 232);
+
+    --left-space: 3vw;
+
+    color: rgb(37, 37, 37);
+    width: 65vw;
+}
+.content .blurb {
+    width: min(60ch, 100%);
+    padding: 0 var(--left-space);
+
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10vh 0 7vh 0;
+}
+.content .form-main {
+    padding: 3vh 0;
+    padding-bottom: 4vh;
+    padding-left: var(--left-space);
+
+    background-color: white;
+    box-shadow: 0 3px 3px rgb(209, 190, 190);
+
+    color: rgb(78, 78, 78);
+    
+}
+.content .form-main h2 {
+    margin: 0;
+    margin-bottom: 1em;
+
+    font-size: 1.5rem;
+}
+.content .inputs {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 500px;
+
+    gap: 2vh 4vw;
+}
+.content .inputs div {
+    display: flex;
+    flex-direction: column;
+}
+.content .inputs div label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-bottom: 3px;
+}
+.content .inputs div input {
+    font-size: 1rem;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+
+    border: 2px lightgray dotted;
+    border-radius: 3px;
+}
+.content .inputs div input:focus, 
+.content .inputs div input:focus-visible {
+    border-color: rgb(84, 84, 255);
+    box-shadow: 0 2px 3px rgb(216, 216, 216);
+
+    outline-style: none; /* to remove browser's default black outline */
+}
+.content .inputs div input:invalid {
+    border-color: red;
+}
+
+
+.content form button {
+    margin-left: var(--left-space);
+
+    border-style: none;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+
+    color: whitesmoke;
+    background-color: var(--dark-accent-color);
+
+    margin-top: 6vh;
+    padding: 1rem 4rem;
+
+    box-shadow: 0 3px 3px rgb(209, 190, 190);
+    
+    transition: all 0.2s ease-in-out;
+}
+.content form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 5px 1px rgb(209, 190, 190);
+}
+
+.content .log-in {
+    margin: 5vh 0;
+    margin-left: var(--left-space);
+}
+.content .log-in a {
+    color: var(--dark-accent-color);
+    font-weight: bold;
+
+    text-decoration: none;
+}
