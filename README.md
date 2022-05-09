@@ -1,1 +1,1 @@
-This is the signup form project from The Odin Project, for practicing creating forms and css.
+This is the signup form project from The Odin Project, for practicing creating forms and styling it with css.
